@@ -1,4 +1,5 @@
 User-agent: *
-Allow: /
+Disallow: /
 
-Sitemap: https://anthon88-nch.github.io/operator-bpla-landing/sitemap.xml
+# Демоверсия закрыта от обхода. Перед запуском проекта замените на Allow: /
+# и добавьте адрес актуального sitemap.xml.
