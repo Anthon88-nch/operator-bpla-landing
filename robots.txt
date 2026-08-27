@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anthon88-nch.github.io/operator-bpla-landing/sitemap.xml
