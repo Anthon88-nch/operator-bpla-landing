@@ -62,6 +62,21 @@
   window.addEventListener('resize', updateMobileContactBar);
   syncMobileContactVisibility();
 
+  const videoFacade = document.querySelector('[data-rutube-src]');
+  videoFacade?.addEventListener('click', () => {
+    const source = videoFacade.dataset.rutubeSrc;
+    if (!source) return;
+    const iframe = document.createElement('iframe');
+    iframe.src = source;
+    iframe.title = 'Видео о подразделении Рубикон и работе с беспилотными системами';
+    iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+    iframe.referrerPolicy = 'no-referrer';
+    iframe.allowFullscreen = true;
+    iframe.tabIndex = 0;
+    videoFacade.replaceWith(iframe);
+    iframe.focus();
+  });
+
   const modal = document.querySelector('.demo-modal');
   const modalClose = modal?.querySelector('button');
   const modalAction = modal?.querySelector('a');
